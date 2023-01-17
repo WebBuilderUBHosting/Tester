@@ -1,0 +1,124 @@
+/* Style Sheet til forsiden til JODA */
+
+/* Start grid --------------------------------------------------------------------- */
+.container{
+    width: auto;
+    height: auto;
+    display: grid;
+    background-color: lightgray;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 9fr 9fr 5fr;
+    grid-template-areas:"t t t t" 
+                        "b b b b"
+                        "m m m m"
+                        "f f f f";
+}
+/* Start Backround ----------------------------------------------------------------- */
+.background{
+    background-image: url(Skjermbilde\ 2022-11-18\ 084158\ \(2\).png); /* Bakgrunnsbilde */
+    background-size: cover; /* Cover beholder aspect ratio, så bildet ikke blir stretched, men dekker hele container */
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 110%;
+    color: white;
+    font-family: 'Russo One', sans-serif; /* Quote font */
+    border-radius: 2%;
+}
+.background_text_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; 
+    width: 30%;
+    height: 10%;
+    margin: 10px;
+}
+.background-text{
+    text-align: center;
+    -webkit-text-stroke: black 0.3px; /* Gir skygge bak teksten */
+}
+.tekstbak{
+    margin-right: 50px;
+    margin-left: 50px;
+}
+
+
+/* Start main ----------------------------------------------------------------------------------------------------------------------- */
+.container_main{
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: 100%;
+}
+.main{
+    height: 88%;
+}
+.main-row-1{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    width: auto;
+    margin-top: 8%;
+    height: 60%;
+}
+.main-row-2{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    width: auto;
+    height: 50%;
+}
+.main-row-1 > div, .main-row-2 > div{ /* Alle div i klassene row 1 og 2 vil få dette */
+    width: 100%;
+    margin: 10px 20px 10px 20px;
+    height: 80%;
+}
+
+
+.tekst{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%;
+    height: 100%;
+    font-family: 'Russo One', sans-serif;
+}
+.main-row-1 a, .main-row-2 a{ /* Styler linkene i row 1 og 2 */
+    text-decoration: none;
+    color: white;
+    font-size: 1.5em;
+    -webkit-text-stroke: black 0.01px;
+}
+.nr1:hover, .nr2:hover, .nr3:hover, .nr4:hover, .nr5:hover { /* Styler linkene ved hover i bakgrunnsbildene 1-5 */
+    filter: brightness(70%);
+}
+.nr1, .nr2, .nr3, .nr4, .nr5{
+    background-size: cover; /* Cover beholder aspect ratio, så bildet ikke blir stretched, men dekker hele container */
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 150%;
+}
+
+.nr1{
+    background-image: url(https://skolerom.no/wp-content/uploads/sites/2/2019/06/plast-cover-1920x1188.jpg);
+}
+.nr2{
+    background-image: url(Alga\ Ub\ ansatte.png);
+}
+.nr3{
+    background-image: url(Kloden.jpg);
+}
+.footer{
+    margin-bottom: 40px;
+}
+
+
+
+
+/* Orginalt var bildene i container_main img og ikke bakgrunnsbilder, men pga av en rar feil som vi ikke fikk fikset endret vi dem til bakgrunnsbilder.
+   Dette gjorde det enklere og få tekst foran bildet. Med bakgrunnsbilde mister vi alternativ tekst funksjonen, men i denne sammenhengen har det ingenting å si, siden selve bildet er ikke viktig, og kan dermed brukes som bakrunnbilde.
+   Det er linken, eller teksten som er viktig i denne situasjonen.
+   
+
+   
